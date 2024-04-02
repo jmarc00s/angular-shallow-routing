@@ -1,2 +1,11 @@
-<h1 class="text-lg underline font-semibold">Hello from daisy ui</h1>
-<button class="btn btn-primary">I'm from daisyUi</button>
+<main class="h-screen flex flex-col gap-2">
+  <app-navbar />
+  <section class="container mx-auto flex justify-center w-full h-full">
+    <button class="btn btn-primary" (click)="isModalOpen.set(true)">
+      Open Modal
+    </button>
+    @if (isModalOpen()) {
+    <app-modal (onClose)="isModalOpen.set(false)" title="New User" />
+    }
+  </section>
+</main>
