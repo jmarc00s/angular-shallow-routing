@@ -7,6 +7,7 @@ import { Role, User } from './application/model';
 import { UsersTableComponent } from './ui/components/users-table/users-table.component';
 import { Observable } from 'rxjs';
 import { UserService } from './application/services/user.service';
+import { routesPaths } from './routes.path';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { UserService } from './application/services/user.service';
 export class AppComponent implements OnInit {
   userService = inject(UserService);
   users$!: Observable<User[]>;
+  routes = routesPaths;
 
   ngOnInit(): void {
     this.users$ = this.userService.getUsers();
