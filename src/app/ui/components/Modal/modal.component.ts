@@ -6,8 +6,7 @@ import { Component, OnInit, input, output, signal } from '@angular/core';
   template: `<div class="modal modal-open">
     <div class="modal-box">
       <h3 class="font-bold text-lg">{{ title() }}</h3>
-      <div>Hello i'm a modal</div>
-
+      <ng-content name="modal-body"></ng-content>
       <div class="modal-action">
         <button class="btn" (click)="onClose.emit()">Close</button>
       </div>
