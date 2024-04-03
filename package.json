@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start:backend": "npx json-server db/db.json",
+    "start": "concurrently \"ng serve --open\" \"npm run start:backend \" ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -30,8 +31,10 @@
     "@angular/cli": "^17.0.1",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "concurrently": "^8.2.2",
     "daisyui": "^4.9.0",
     "jasmine-core": "~5.1.0",
+    "json-server": "^1.0.0-alpha.23",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
