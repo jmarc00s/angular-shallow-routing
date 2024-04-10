@@ -1,4 +1,4 @@
-import { Component, OnInit, input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { User } from '../../../application/model';
 import { RoleTagComponent } from '../role-tag/role-tag.component';
 
@@ -27,8 +27,6 @@ import { RoleTagComponent } from '../role-tag/role-tag.component';
     </tbody>
   </table>`,
 })
-export class UsersTableComponent implements OnInit {
+export class UsersTableComponent {
   users = input<User[]>([]);
-
-  ngOnInit() {}
 }

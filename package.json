@@ -8,15 +8,13 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "prepare": "husky",
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\"",
-    "lint": "ng lint"
+    "prepare": "husky"
   },
   "private": true,
   "lint-staged": {
-    "src/**/*.{ts,css,html}": [
-      "npm run prettier:check",
-      "npm run lint"
+    "*.{ts,html}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "dependencies": {

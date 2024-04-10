@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, computed, input } from '@angular/core';
-import { Role } from '../../../application/model';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { Role } from '../../../application/model';
 
 @Component({
   selector: 'app-role-tag',
