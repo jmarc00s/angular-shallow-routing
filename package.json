@@ -9,12 +9,14 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prepare": "husky",
-    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\"",
+    "lint": "ng lint"
   },
   "private": true,
   "lint-staged": {
     "src/**/*.{ts,css,html}": [
-      "npm run prettier:check"
+      "npm run prettier:check",
+      "npm run lint"
     ]
   },
   "dependencies": {
@@ -35,11 +37,19 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.1",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
     "@angular/cli": "^17.0.1",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
     "concurrently": "^8.2.2",
     "daisyui": "^4.9.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
     "json-server": "^1.0.0-alpha.23",
