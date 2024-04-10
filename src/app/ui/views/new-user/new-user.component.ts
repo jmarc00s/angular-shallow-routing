@@ -11,9 +11,7 @@ import { routesPaths } from '../../../routes.path';
   providers: [Location],
   template: `<app-modal title="Select user profile" (onClose)="handleClose()">
     <div class="flex justify-between">
-      <a class="btn btn-primary" [routerLink]="['/' + routes.admin.new]"
-        >Add Admin</a
-      >
+      <a class="btn btn-primary" [routerLink]="['/' + routes.admin.new]">Add Admin</a>
       <a class="btn btn-secondary">Add Manager</a>
       <a class="btn btn-accent">Add Guest</a>
     </div>

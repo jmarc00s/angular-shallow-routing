@@ -8,7 +8,7 @@ import { Component, OnInit, input, output, signal } from '@angular/core';
       <div class="bg-base-300 p-4">
         <h3 class="font-bold text-xl">{{ title() }}</h3>
       </div>
-      <section class="p-8">
+      <section class="px-8">
         <ng-content name="modal-body"></ng-content>
       </section>
       <div class="modal-action p-4">

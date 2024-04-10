@@ -6,11 +6,9 @@ import { CommonModule } from '@angular/common';
   selector: 'app-role-tag',
   standalone: true,
   imports: [CommonModule],
-  template: `<span
-    class="badge font-semibold"
-    [ngClass]="this.roleStyles[this.role]"
-    >{{ role }}</span
-  >`,
+  template: `<span class="badge font-semibold" [ngClass]="this.roleStyles[this.role]">{{
+    role
+  }}</span>`,
 })
 export class RoleTagComponent {
   @Input() role!: Role;

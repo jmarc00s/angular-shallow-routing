@@ -7,9 +7,16 @@
     "start": "concurrently \"ng serve --open\" \"npm run start:backend \" ",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "husky",
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
   "private": true,
+  "lint-staged": {
+    "src/**/*.{ts,css,html}": [
+      "npm run prettier:check"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
@@ -33,6 +40,7 @@
     "@types/jasmine": "~5.1.0",
     "concurrently": "^8.2.2",
     "daisyui": "^4.9.0",
+    "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
     "json-server": "^1.0.0-alpha.23",
     "karma": "~6.4.0",
@@ -40,6 +48,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
     "typescript": "~5.2.2"
   }
 }

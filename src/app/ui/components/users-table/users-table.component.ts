@@ -17,12 +17,12 @@ import { RoleTagComponent } from '../role-tag/role-tag.component';
     </thead>
     <tbody>
       @for (user of users(); track user.id) {
-      <tr>
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td><app-role-tag [role]="user.role" /></td>
-      </tr>
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td><app-role-tag [role]="user.role" /></td>
+        </tr>
       }
     </tbody>
   </table>`,
