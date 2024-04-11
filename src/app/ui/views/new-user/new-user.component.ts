@@ -1,11 +1,10 @@
-import { Component, inject } from '@angular/core';
-import { ModalComponent } from '../../components/modal/modal.component';
 import { Location } from '@angular/common';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { routesPaths } from '../../../routes.path';
+import { ModalComponent } from '../../components/modal/modal.component';
 
 @Component({
-  selector: 'selector-name',
   standalone: true,
   imports: [ModalComponent, RouterModule],
   providers: [Location],

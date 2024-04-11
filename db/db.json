@@ -1,9 +1,15 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "as45",
       "name": "user name",
       "email": "mail@mail.com",
+      "role": "Admin"
+    },
+    {
+      "id": "b5e0",
+      "name": "João ",
+      "email": "joao@joao.com",
       "role": "Admin"
     }
   ]

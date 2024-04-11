@@ -12,4 +12,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./ui/views/admin-user/admin-user.component').then((c) => c.AdminUserComponent),
   },
+  {
+    path: routesPaths.admin.edit,
+    loadComponent: () =>
+      import('./ui/views/admin-user/admin-user.component').then((c) => c.AdminUserComponent),
+  },
 ];

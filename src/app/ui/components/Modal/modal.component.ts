@@ -4,16 +4,14 @@ import { Component, input, output } from '@angular/core';
   standalone: true,
   selector: 'app-modal',
   template: `<div class="modal modal-open">
-    <div class="modal-box p-0 flex flex-col gap-4">
-      <div class="bg-base-300 p-4">
+    <div class="modal-box p-0 flex flex-col">
+      <div class="bg-base-300 p-4 flex justify-between items-center">
         <h3 class="font-bold text-xl">{{ title() }}</h3>
+        <button class="btn btn-ghost btn-sm" (click)="onClose.emit()">x</button>
       </div>
-      <section class="px-8">
-        <ng-content name="modal-body"></ng-content>
+      <section class="p-8">
+        <ng-content></ng-content>
       </section>
-      <div class="modal-action p-4">
-        <button class="btn" (click)="onClose.emit()">Close</button>
-      </div>
     </div>
   </div>`,
 })
